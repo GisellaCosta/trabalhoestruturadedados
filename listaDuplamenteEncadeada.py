@@ -16,20 +16,18 @@ class DoubleinkedListIterator:
         self.iterator = None
         self.size = 0
 
-
     # Finalizado em aula 26/08/22
-    def addNode(self, data):  #anexar um Node depois do iterador:
+    def addNode(self, data):  # anexar um Node depois do iterador:
 
         newNode = ListNode(data)
 
-
-        if  self.size == 0:  #trata a lista vazia
+        if self.size == 0:  # trata a lista vazia
             self.iterator = newNode
             self.firstNode = newNode
             self.lastNode = newNode
-        elif self.iterator == self.lastNode:  #o iterador está no último elemento
+        elif self.iterator == self.lastNode:  # o iterador está no último elemento
             self.lastNode.nextNode = newNode  # este Noh para a ser agora o ultimo Noh
-            newNode.antNode = self.iterator # ou self.lastNode Linha para fazer a lista ser duplamente encadeada
+            newNode.antNode = self.iterator  # ou self.lastNode Linha para fazer a lista ser duplamente encadeada
             self.iterator = newNode
             self.lastNode = newNode  # por o ponteiro lastNode sobre o ultimo Noh
         else:  # iterator is on an inner element ; o iterador está em algum elemento interno
@@ -46,18 +44,18 @@ class DoubleinkedListIterator:
 
         newNode = ListNode(data)  # treats the empty list ; trata a lista vazia
         newNode.nextNode = None
-        if (self.size == 0):  #trata a lista vazia
+        if (self.size == 0):  # trata a lista vazia
             self.iterator = newNode
             self.firstNode = newNode
             self.lastNode = newNode
         # Feito em Sala 26/08/22
-        elif self.iterator == self.firstNode:  #o iterador está no primeiro elemento
+        elif self.iterator == self.firstNode:  # o iterador está no primeiro elemento
             newNode.nextNode = self.iterator  # o novo nó aponta para o antigo primeiro nó
             newNode.antNode = None
             self.iterator.antNode = newNode
             self.firstNode = newNode  # firstNode aponta para o novoNoh que passa a ser o primeiro nó
             self.iterator = newNode  # o iterador fica sob o novoNoh que foi inserido
-        else:  #o iterador está em algum elemento interno
+        else:  # o iterador está em algum elemento interno
             newNode.antNode = self.iterator.antNode
             newNode.nextNode = self.iterator
             self.iterator.antNode.nextNode = newNode
@@ -66,7 +64,7 @@ class DoubleinkedListIterator:
         return True
 
     def elimNode(self):  # elimina o elemento que está sobre o iterador e avanca o iterador para proximo Noh.
-        if (self.size == 0): # Sem tratar a Lista Vazia se o método for chamado o size ficar com valor -1
+        if (self.size == 0):  # Sem tratar a Lista Vazia se o método for chamado o size ficar com valor -1
             return True
 
         else:
@@ -87,7 +85,7 @@ class DoubleinkedListIterator:
                     print("Else - If - Else")
             else:  # iterator pode estar sob o ultimo ou um elemento interno
                 if self.iterator == self.lastNode:  # o iterador esta sob o ultimo:
-                    self.lastNode = self.iterator.antNode # o penultimo(currentNode) agora passa a ser o ultimo Noh
+                    self.lastNode = self.iterator.antNode  # o penultimo(currentNode) agora passa a ser o ultimo Noh
                     self.iterator.antNode.nextNode = None  # isola o Node
                     self.iterator = self.iterator.antNode  # iterador fica indefinido
 
@@ -297,8 +295,6 @@ def estaOrdenada(lst: DoubleinkedListIterator):
         return True
 
 
-
-
 def contidaLista(lst1, lst2):
     # caso 0: as duas listas sao vazias
     if (lst1.size == 0 and lst2.size == 0):
@@ -338,7 +334,6 @@ def contidaLista(lst1, lst2):
             return False
 
         # inverter uma lista lst, destruindo a lista original
-
 
 
 def invLista(lst: DoubleinkedListIterator):
