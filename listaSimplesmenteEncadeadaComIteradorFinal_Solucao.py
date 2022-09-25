@@ -441,22 +441,3 @@ def invLista(lst:SinglyLinkedListIterator):
         lstInv.insNode(lst.get_iterator().getData()) # lst.iterator.data
         lst.elimNode() # nao destruir a lista original: lst.nextNode()
     return lstInv
-
-lst = SinglyLinkedListIterator()
-# inseri elementos nesta lst
-# gerei uma lista com a sequencia inversa de lst e lst ficou vazia
-lstInv = invLista(lst)
-
-print("teste")
-
-# testar
-# crir a lista lst1
-# inserir elementos em lst1
-# criar a lsita lst2
-# inserir elemento em ls1
-# esta_contida = contidaLista(lst1, lst2)
-#if(esta_contida):
-# if(contidaLista(lst1, lst2)):
-#     print("lista 2 esta contida na lista 1")
-# else:
-#     print("lista 2 NAO esta contida na lista 1")
