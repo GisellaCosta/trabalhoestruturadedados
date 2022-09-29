@@ -1,11 +1,3 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-# from listaSimplesmenteEncadeadaComIteradorFinal_Solucao import ListNode
-# from listaSimplesmenteEncadeadaComIteradorFinal_Solucao import SinglyLinkedListIterator
 import random
 
 from listaDuplamenteEncadeada import DoubleinkedListIterator
@@ -13,23 +5,6 @@ from listaSimplesmenteEncadeadaComIteradorFinal_Solucao import *
 
 # ================ Lista de Exercícios sobre TAD Lista Simplesmente Encadeada ============
 from passageiro import Passageiro
-
-""""
-1) def print_lista(lista):   OK
-2) def maior_elemento(lista): OK
-3) def maior_menor_elemento(lista): OK
-4) Verificar se duas listas são iguais. Duas listas são iguais se ambas as estruturas têm o mesmo 
-número de elementos, e estes são iguais um a um. Em particular, duas listas vazias são iguais. 
-def iguais_listas(lst1, lst2): OK 
-5) def adicionar_final_lista(lst1, data): OK
-6) def insLista(lst1, data): # insere um elemento no inicio da lista OK
-7) def concatLista(lst1, lst2): # concatenar a lst2 no final da lst1
-8) def esta_na_lista(lst:SinglyLinkedListIterator, data):
-9) def estaOrdenada(lst:SinglyLinkedListIterator): # ordem crescente
-10) Verificar se uma lista lst2 está contida numa lista lst1. 
-    def contidaLista(lst1, lst2):
-11) def invLista(lst:SinglyLinkedListIterator): # inverter uma lista lst, destruindo a lista original
-"""
 
 
 def print_lista(lista):
